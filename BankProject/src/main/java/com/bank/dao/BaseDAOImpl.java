@@ -109,6 +109,8 @@ public class BaseDAOImpl implements BankDAO {
                     rs = preparedStatement.getGeneratedKeys();
                     if (rs.next()) {
                         Long accountId = rs.getLong(1);
+                        account.setAccountId(accountId);
+
                         System.out.println("added new account, Account Id : " + accountId);
                         preparedStatement = connection.prepareStatement(tranInsertQuery);
                         preparedStatement.setLong(1, accountId);
@@ -132,6 +134,7 @@ public class BaseDAOImpl implements BankDAO {
                 if (rs.next()) {
                     Long accountId = rs.getLong(1);
                     System.out.println("added new account, Account Id : " + accountId);
+                    account.setAccountId(accountId);
                     preparedStatement = connection.prepareStatement(tranInsertQuery);
                     preparedStatement.setLong(1, accountId);
                     preparedStatement.setString(2, "D");
