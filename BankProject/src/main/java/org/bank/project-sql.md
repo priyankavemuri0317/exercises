@@ -1,7 +1,8 @@
 P0 - Banking Operations
 
 CREATE TABLE dbo.userdata (
-userid serial4 NOT NULL, firstname varchar(50) NOT NULL, lastname varchar(50) NOT NULL, CONSTRAINT userdata_pkey PRIMARY
+userid serial4 NOT NULL, firstname varchar(50) NOT NULL, lastname varchar(50) NOT NULL, 
+CONSTRAINT userdata_pkey PRIMARY
 KEY (userid)
 );
 
