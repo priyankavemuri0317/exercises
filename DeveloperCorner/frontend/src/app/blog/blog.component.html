@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <form>
+        <H2>Search Blog</H2>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">User</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="Enter user">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="Enter title">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Search</button> &nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary" (click)="addBlog()">Add Blog</button>
+            </div> 
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>User 1</td>
+                    <td>Title 1</td>
+                    <td>Content 1..</td>
+                    <td><a href="javascript: void(0);"  (click)="viewBlog()">View</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>User 2</td>
+                    <td>Title 2</td>
+                    <td>Content 2..</td>
+                    <td><a href="javascript: void(0);"  (click)="viewBlog()">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

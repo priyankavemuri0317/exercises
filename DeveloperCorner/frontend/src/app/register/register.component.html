@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1>Please provide account details to sign up:</h1>
+    <form name="form" (ngSubmit)="register()" #f="ngForm" ngNativeValidate>
+        <div>
+            Username:
+            <br/>
+            <input type="text" name="username" [(ngModel)]="model.username" #username="ngModel" required/>
+        </div>
+        <div>
+            Password:
+            <br/>
+            <input type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required/>
+        </div>
+        <div>
+            Email:
+            <br/>
+            <input type="email" name="email" [(ngModel)]="model.email" #email="ngModel" required/>
+        </div>
+        <div>
+            Are you going to learn or teach?
+            <br/>
+            <input type="radio" id="learner" name="learner" value="LEARNER" [(ngModel)]="model2.rolename" #rolename="ngModel">
+            <label for="learner">Learner</label><br>
+            <input type="radio" id="mentor" name="mentor" value="MENTOR" [(ngModel)]="model2.rolename" #rolename="ngModel">
+            <label for="mentor">Mentor</label><br>
+        </div>
+        <div>
+            What time are you available?
+            <br/>
+            <input type="radio" id="morning" name="morning" value="morning" [(ngModel)]="model3.timeAvailable" #role="ngModel">
+            <label for="morning">Morning</label><br>
+            <input type="radio" id="afternoon" name="afternoon" value="afternoon" [(ngModel)]="model3.timeAvailable" #role="ngModel">
+            <label for="afternoon">Afternoon</label><br>
+            <input type="radio" id="evening" name="evening" value="evening" [(ngModel)]="model3.timeAvailable" #role="ngModel">
+            <label for="evening">Evening</label><br>
+        </div>
+        <br/>
+        <div>
+            <button>Create Account</button>
+        </div>
+    </form>
+</body>
+</html>
